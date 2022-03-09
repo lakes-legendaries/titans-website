@@ -15,5 +15,5 @@ fi
 az storage blob sync \
     -c website \
     -s $(pwd) \
-    --exclude-path .azconn \
+    --exclude-path .azconn .git \
 &> /dev/null
