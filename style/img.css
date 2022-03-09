@@ -1,0 +1,13 @@
+img.logo {
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+img.divider {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: var(--max-width);
+}

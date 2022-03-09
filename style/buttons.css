@@ -1,0 +1,31 @@
+:root {
+    --font-size-button: 16px;
+    --button-border-width: 2px;
+    --button-width: 20%;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    :root {
+        --font-size-button: 36px;
+        --button-border-width: 4px;
+        --button-width: 45%;
+    }
+}
+
+button {
+    background-color: #000000;
+    color: #C0C0C0;
+    border: var(--button-border-width) solid #C0C0C0;
+    width: var(--button-width);
+    padding: 10px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: var(--font-size-button);
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #000000;
+}

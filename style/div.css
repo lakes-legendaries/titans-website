@@ -1,0 +1,34 @@
+body {
+    background-color: var(--color-bg);
+    background-color: #000000;
+}
+
+div.centered {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    text-align: center;
+}
+
+div.stacked-parent {
+    position: relative;
+    top: 0px;
+}
+
+div.stacked {
+    position: absolute;
+    top: 0px;
+}
+
+div.padding {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+div.no-show {
+    opacity: 0;
+}
+
+span {
+    --my-width: 200px;
+    width: var(--my-width);
+}

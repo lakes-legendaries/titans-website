@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# get access
+if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
+    if [ ! -f ".azconn" ]; then
+        echo "Cannot connect to Azure. "
+        echo "Set AZURE_STORAGE_CONNECTION_STRING, "
+        echo "or provide it in an .azconn file."
+    else
+        export AZURE_STORAGE_CONNECTION_STRING="$(cat .azconn)"
+    fi
+fi
+
+# sync files
+az storage blob sync \
+    -c website \
+    -s $(pwd) \
+    --exclude-path .azconn \
+&> /dev/null

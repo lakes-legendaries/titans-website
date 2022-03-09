@@ -1,0 +1,38 @@
+:root {
+    --font-family: "Roboto";
+    --font-color: #FFFFFF;
+    --font-size-h1: 24px;
+    --font-size-h2: 20px;
+    --font-size-p1: 16px;
+    --font-size-p2: 12px;
+    --font-size-p3: 10px;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    :root {
+        --font-size-h1: 50px;
+        --font-size-h2: 36px;
+        --font-size-p1: 18px;
+    }
+}
+
+p, a {
+    font-family: var(--font-family);
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+p.h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+p.p1 {
+    font-size: var(--font-size-p1);
+    font-weight: 400;
+}
+
+span.ks {
+    color: #05ce78;
+}
