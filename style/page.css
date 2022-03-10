@@ -1,5 +1,8 @@
+:root {
+    --max-width: 1080px;
+}
+
 body {
-    background-color: var(--color-bg);
     background-color: #000000;
 }
 
@@ -30,9 +33,4 @@ div.no-show {
 
 .collapsed {
     display: none;
-}
-
-span {
-    --my-width: 200px;
-    width: var(--my-width);
 }

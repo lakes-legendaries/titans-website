@@ -2,16 +2,12 @@
     --font-family: "Roboto";
     --font-color: #FFFFFF;
     --font-size-h1: 24px;
-    --font-size-h2: 20px;
     --font-size-p1: 16px;
-    --font-size-p2: 12px;
-    --font-size-p3: 10px;
 }
 
 @media (pointer:none), (pointer:coarse) {
     :root {
         --font-size-h1: 50px;
-        --font-size-h2: 36px;
         --font-size-p1: 18px;
     }
 }

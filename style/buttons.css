@@ -1,31 +1,36 @@
 :root {
-    --font-size-button: 16px;
+    --button-font-size: 16px;
+    --button-font-weight: 700;
     --button-border-width: 2px;
     --button-width: 20%;
+    --button-color: #C0C0C0;
+    --button-bg-color: #000000;
+    --button-hover-color: #FFFFFF;
+    --button-padding: 10px;
 }
 
 @media (pointer:none), (pointer:coarse) {
     :root {
-        --font-size-button: 36px;
+        --button-font-size: 36px;
         --button-border-width: 4px;
         --button-width: 45%;
     }
 }
 
 button {
-    background-color: #000000;
-    color: #C0C0C0;
-    border: var(--button-border-width) solid #C0C0C0;
+    background-color: var(--button-bg-color);
+    color: var(--button-color);
+    border: var(--button-border-width) solid var(--button-color);
     width: var(--button-width);
-    padding: 10px;
+    padding: var(--button-padding);
     font-family: var(--font-family);
-    font-weight: 700;
-    font-size: var(--font-size-button);
-    margin: 10px;
+    font-weight: var(--button-font-weight);
+    font-size: var(--button-font-size);
+    margin: var(--button-padding);
 }
 
 button:hover {
-    background-color: #FFFFFF;
-    color: #000000;
-    border: 1px solid #000000;
+    background-color: var(--button-hover-color);
+    color: var(--button-bg-color);
+    border: 0px;
 }
