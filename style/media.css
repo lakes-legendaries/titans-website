@@ -13,7 +13,7 @@ img.divider {
 }
 
 img.thumbnail {
-    width: 25%;
+    width: calc(0.20 * var(--max-width));
 }
 
 video.std {
