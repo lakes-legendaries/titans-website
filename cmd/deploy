@@ -13,7 +13,7 @@ fi
 
 # sync files
 az storage blob sync \
-    -c website \
+    -c "\$web" \
     -s $(pwd) \
-    --exclude-path .azconn .git \
-&> /dev/null
+    --exclude-path .azconn \
+    --exclude-path .git \
