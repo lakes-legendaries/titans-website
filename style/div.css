@@ -14,7 +14,7 @@ div.stacked-parent {
     top: 0px;
 }
 
-div.stacked {
+.stacked {
     position: absolute;
     top: 0px;
 }
@@ -26,6 +26,10 @@ div.padding {
 
 div.no-show {
     opacity: 0;
+}
+
+.collapsed {
+    display: none;
 }
 
 span {
