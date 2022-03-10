@@ -17,7 +17,7 @@ div.stacked-parent {
     top: 0px;
 }
 
-.stacked {
+div.stacked {
     position: absolute;
     top: 0px;
 }
