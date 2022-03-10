@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Title -->
+    <title>
+        Evolved Deck-Building | Titans Of Eden
+    </title>
+    
+    <!-- html/partial/include.html -->
+
+</head>
+
+<body>
+
+<!-- html/partial/header.html -->
+
+<div class="centered">
+    <div class="padding" id="body">
+        <div class="stacked-parent">
+
+            <!-- Main Video -->
+            <div class="stacked">
+                <video class="collapsed std" id="landing_video" controls>
+                    <source src="video/Landing Video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Video Cover -->
+            <div class="stacked">
+                <img class="collapsed" src="img/landing_cover.png" id="video_cover">
+            </div>
+
+            <!-- Loading Screen -->
+            <div class="stacked">
+                <video class="std" id="title_video" autoplay muted>
+                    <source src="video/Title Video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- html/partial/footer.html -->
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="script/loading.js"></script>
+
+</body>
+
+</html>

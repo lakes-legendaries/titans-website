@@ -29,7 +29,7 @@ button {
     margin: var(--button-padding);
 }
 
-button:hover {
+button:hover, button.clicked {
     background-color: var(--button-hover-color);
     color: var(--button-bg-color);
     border: 0px;

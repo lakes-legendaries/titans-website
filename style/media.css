@@ -12,6 +12,10 @@ img.divider {
     max-width: var(--max-width);
 }
 
+img.thumbnail {
+    width: 25%;
+}
+
 video.std {
     width: 100%;
     max-width: var(--max-width);

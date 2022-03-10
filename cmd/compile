@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+
+from os import getcwd, listdir
+from os.path import join
+import re
+
+
+if __name__ == '__main__':
+
+    # get directory listing
+    folder = join(getcwd(), 'html')
+    files = listdir(folder)
+
+    # compile each file
+    for file in files:
+
+        # only do html files
+        if file.rsplit('.')[-1] != 'html':
+            continue
+
+        # load file
+        fname = join(folder, file)
+        contents = open(fname, 'r').read()
+
+        # replace directives
+        directives = re.findall(r'<!-- html/partial/.*.html -->', contents)
+        for directive in directives:
+            partial_fname = directive[5:-4]
+            partial_contents = open(partial_fname, 'r').read()
+            contents = contents.replace(directive, partial_contents)
+        
+        # minify
+        contents = re.sub(r'<!-- .* -->', '', contents)
+        contents = re.sub(r'[ ]{2,}', ' ', contents)
+        contents = re.sub(r'^ ', '', contents, flags=re.MULTILINE)
+        contents = re.sub(r'\n{2,}', '\n', contents, flags=re.MULTILINE)
+
+        # write compiled html file
+        print(contents, file=open(file, 'w'))

@@ -1,90 +1,61 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-    <!-- Title -->
-    <title>
-        Evolved Deck-Building | Titans Of Eden
-    </title>
-    
-    <!-- Images -->
-    <link rel="icon" type="image/png" href="img/icon.png" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style/page.css" />
-    <link rel="stylesheet" type="text/css" href="style/font.css" />
-    <link rel="stylesheet" type="text/css" href="style/media.css" />
-    <link rel="stylesheet" type="text/css" href="style/buttons.css" />
-
-    <!-- Meta -->
-    <meta name="theme-color" content="#000000">
+<title>Evolved Deck-Building | Titans Of Eden</title>
+<link rel="icon" type="image/png" href="media/icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style/page.css" />
+<link rel="stylesheet" type="text/css" href="style/font.css" />
+<link rel="stylesheet" type="text/css" href="style/media.css" />
+<link rel="stylesheet" type="text/css" href="style/buttons.css" />
+<meta name="theme-color" content="#000000">
 </head>
-
 <body>
-
-<!-- Header -->
 <div class="centered">
-    <div class="no-show" id="header">
-        <img src="img/logo.png" class="logo">
-    </div>
+<div class="no-show" id="header">
+<img src="media/logo.png" class="logo">
 </div>
-
-<!-- Body -->
+</div>
 <div class="centered">
-    <div class="padding" id="body">
-        <div class="stacked-parent">
-
-            <!-- Main Video -->
-            <div class="stacked">
-                <video class="collapsed std" id="landing_video" controls>
-                    <source src="video/Landing Video.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <!-- Video Cover -->
-            <div class="stacked">
-                <img class="collapsed" src="img/landing_cover.png" id="video_cover">
-            </div>
-
-            <!-- Loading Screen -->
-            <div class="stacked">
-                <video class="std" id="title_video" autoplay muted>
-                    <source src="video/Title Video.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>
+<div class="padding" id="body">
+<div class="stacked-parent">
+<div class="stacked">
+<video class="collapsed std" id="landing_video" controls>
+<source src="media/landing_video.mp4" type="video/mp4">
+</video>
 </div>
-
-<!-- Footer -->
+<div class="stacked">
+<img class="collapsed" src="media/landing_cover.png" id="video_cover">
+</div>
+<div class="stacked">
+<video class="std" id="title_video" autoplay muted>
+<source src="media/title_video.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+</div>
+</div>
 <div class="centered">
-    <div class="no-show" id="footer">
-
-        <!-- Buttons -->
-        <button>Watch More Videos</button>
-        <button>Play The Online Demo</button>
-        <button>Read More</button>
-        <button>Print and Play</button>
-
-        <!-- Sign-Up Text -->
-        <p class="h1"><span class="ks">Coming to Kickstarter:</span> Sign up to get notified about our launch!</p>
-        <p class="p1">We'll send one update each month. Opt-out at any time.</p>
-
-        <!-- Divider -->
-        <img src="img/divider.png" class="divider">
-    </div>
+<div class="no-show" id="footer">
+<button id="video_button">Watch More Videos</button>
+<button>Play The Online Demo</button>
+<button>Read More</button>
+<button>Print and Play</button>
+<div class="collapsed" id="video_thumbnails">
+<a href="landing.html"><img class="thumbnail" src="media/landing_thumbnail.png"></a>
+<a href="empire.html"><img class="thumbnail" src="media/empire_thumbnail.png"></a>
+<a href="nowait.html"><img class="thumbnail" src="media/nowait_thumbnail.png"></a>
+<a href="constructed.html"><img class="thumbnail" src="media/constructed_thumbnail.png"></a>
 </div>
-
-<!-- Scripts -->
+<p class="h1"><span class="ks">Coming to Kickstarter:</span> Sign up to get notified about our launch!</p>
+<p class="p1">We'll send one update each month. Opt-out at any time.</p>
+<img src="media/divider.png" class="divider">
+</div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="script/loading.js"></script>
-
 </body>
-
 </html>
+

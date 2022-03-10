@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# compile files
+cmd/compile
+
 # get access
 if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
     if [ ! -f ".azconn" ]; then
@@ -17,3 +20,5 @@ az storage blob sync \
     -s $(pwd) \
     --exclude-path .azconn \
     --exclude-path .git \
+    --exclude-path cmd \
+    --exclude-path html
