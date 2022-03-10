@@ -16,7 +16,7 @@ img.thumbnail {
     width: calc(0.20 * var(--max-width));
 }
 
-video.std {
+img.std, video.std {
     width: 100%;
     max-width: var(--max-width);
 }
