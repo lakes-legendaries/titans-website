@@ -1,11 +1,13 @@
 :root {
     --max-width: 1080px;
+    --max-width-p: 1080px;
     --credits-width: 600px;
 }
 
 @media (pointer:none), (pointer:coarse) {
     :root {
         --credits-width: 95%;
+        --max-width-p: 80%;
     }
 }
 
@@ -17,6 +19,10 @@ div.centered {
     margin: 0 auto;
     max-width: var(--max-width);
     text-align: center;
+}
+
+div.text-block {
+    max-width: var(--max-width-p);
 }
 
 div.stacked-parent {
