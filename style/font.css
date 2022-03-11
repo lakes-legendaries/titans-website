@@ -1,6 +1,7 @@
 :root {
     --font-family: "Roboto";
     --font-color: #FFFFFF;
+    --font-color-bg: #C0C0C0;
     --font-size-h1: 24px;
     --font-size-h2: 20px;
     --font-size-p1: 16px;
@@ -35,6 +36,15 @@ p.h2 {
 p.p1 {
     font-size: var(--font-size-p1);
     font-weight: 400;
+}
+
+p.justified {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+p.bgcolor {
+    color: var(--font-color-bg);
 }
 
 span.ks {

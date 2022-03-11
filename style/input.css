@@ -8,6 +8,7 @@
     --button-hover-color: #FFFFFF;
     --button-padding: 10px;
     --input-width: 25%;
+    --input-font-weight: 400;
     --submit-width: unset;
     --comments-width: 75%;
 }
@@ -18,8 +19,8 @@
         --button-border-width: 4px;
         --button-width: 45%;
         --input-width: 70%;
-        --submit-width: 20%
-        --comments-width: 100%;
+        --submit-width: 20%;
+        --comments-width: 90%;
     }
 }
 
@@ -48,9 +49,12 @@ input[type=text] {
     text-align: center;
     color: var(--font-color);
     width: var(--input-width);
+    font-weight: var(--input-font-weight);
 }
 
 textarea {
     width: var(--comments-width);
+    max-width: var(--max-width);
     resize: none;
+    font-weight: var(--input-font-weight);
 }

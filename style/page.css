@@ -32,6 +32,10 @@ div.header_footer {
     opacity: 1;
 }
 
+div.credits {
+    width: 600px;
+}
+
 .collapsed {
     display: none;
 }
