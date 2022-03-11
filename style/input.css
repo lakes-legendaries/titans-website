@@ -7,6 +7,8 @@
     --button-bg-color: #000000;
     --button-hover-color: #FFFFFF;
     --button-padding: 10px;
+    --input-width: 25%;
+    --submit-width: unset;
 }
 
 @media (pointer:none), (pointer:coarse) {
@@ -14,10 +16,12 @@
         --button-font-size: 36px;
         --button-border-width: 4px;
         --button-width: 45%;
+        --input-width: 70%;
+        --submit-width: 20%
     }
 }
 
-button {
+button, input[type=text] {
     background-color: var(--button-bg-color);
     color: var(--button-color);
     border: var(--button-border-width) solid var(--button-color);
@@ -32,5 +36,14 @@ button {
 button:hover, button.clicked {
     background-color: var(--button-hover-color);
     color: var(--button-bg-color);
-    border: 0px;
+}
+
+button.subscribe {
+    width: var(--submit-width);
+}
+
+input[type=text] {
+    text-align: center;
+    color: var(--font-color);
+    width: var(--input-width);
 }

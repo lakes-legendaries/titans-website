@@ -2,12 +2,14 @@
     --font-family: "Roboto";
     --font-color: #FFFFFF;
     --font-size-h1: 24px;
+    --font-size-h2: 20px;
     --font-size-p1: 16px;
 }
 
 @media (pointer:none), (pointer:coarse) {
     :root {
         --font-size-h1: 50px;
+        --font-size-h2: 30px;
         --font-size-p1: 18px;
     }
 }
@@ -21,6 +23,12 @@ p, a {
 p.h1 {
     font-size: var(--font-size-h1);
     font-weight: 700;
+    margin-bottom: 0px;
+}
+
+p.h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 500;
     margin-bottom: 0px;
 }
 

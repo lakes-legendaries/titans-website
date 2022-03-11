@@ -24,3 +24,29 @@ function show_block(prefix) {
 for (var prefix of ["video", "read", "pnp"]) {
     $("#" + prefix + "_button").click(show_block(prefix));
 }
+
+// submit button
+$("#subscribe_button").click(
+    function(){
+
+        // make success message visible
+        var box = document.getElementById("subscribe_success_box");
+        box.style.display = "block";
+        
+        // position message
+        var msg = document.getElementById("subscribe_success_message");
+        const xy = $("#subscribe_form").offset();
+        const width = document.getElementById("subscribe_form").clientWidth;
+        msg.style.top = xy.top + "px";
+        msg.style.left = xy.left + "px";
+        msg.style.width = width + "px";
+        msg.style.position = "absolute";
+        msg.style.opacity = 0;
+
+        // fade-out subscribe options
+        $("#subscribe_form").fadeTo(1000, 0);
+
+        // fade-in sucess message
+        $("#subscribe_success_message").fadeTo(1000, 1);
+    }
+);
