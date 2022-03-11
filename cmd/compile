@@ -36,4 +36,4 @@ if __name__ == '__main__':
         contents = re.sub(r'\n{2,}', '\n', contents, flags=re.MULTILINE)
 
         # write compiled html file
-        print(contents, file=open(file, 'w'))
+        print(contents, file=open(file.rsplit('.')[0], 'w'))

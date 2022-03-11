@@ -26,11 +26,12 @@ for DIR in script style; do
 done
 
 # upload root html files
-for FILE in $(ls *.html); do
+for FILE in $(ls -p | grep -v /); do
     az storage blob upload \
         -c "\$web" \
         -f $FILE \
         -n $FILE \
         --no-progress \
+        --content-type text/html \
     1> /dev/null
 done
