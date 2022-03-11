@@ -12,7 +12,7 @@ if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
         echo "or provide it in $SECRETS_FILE"
         exit 1
     fi
-    export AZURE_STORAGE_CONNECTION_STRING="$(cat $FILE)"
+    export AZURE_STORAGE_CONNECTION_STRING="$(cat $SECRETS_FILE)"
 fi
 
 # upload files in directories
