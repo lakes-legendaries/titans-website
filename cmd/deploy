@@ -26,9 +26,11 @@ for DIR in script style; do
 done
 
 # upload root html files
-az storage blob upload-batch \
-    -s "$(pwd)" \
-    -d "\$web" \
-    --pattern "$(pwd)/*.html" \
-    --no-progress \
-1> /dev/null
+for FILE in $(ls *.html); do
+    az storage blob upload \
+        -c "\$web" \
+        -f $FILE \
+        -n $FILE \
+        --no-progress \
+    1> /dev/null
+done
