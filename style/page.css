@@ -7,7 +7,7 @@
 @media (pointer:none), (pointer:coarse) {
     :root {
         --credits-width: 95%;
-        --max-width-p: 80%;
+        --max-width-p: 90%;
     }
 }
 

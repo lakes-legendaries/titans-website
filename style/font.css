@@ -4,6 +4,7 @@
     --font-color-bg: #C0C0C0;
     --font-size-h1: 24px;
     --font-size-h2: 20px;
+    --font-size-p0: 20px;
     --font-size-p1: 16px;
     --font-size-p2: 14px;
 }
@@ -12,6 +13,7 @@
     :root {
         --font-size-h1: 50px;
         --font-size-h2: 30px;
+        --font-size-p0: 30px;
         --font-size-p1: 18px;
         --font-size-p2: 12px;
     }
@@ -29,10 +31,14 @@ p.h1 {
     margin-bottom: 0px;
 }
 
-p.h2 {
+p.h2, p.p0 {
     font-size: var(--font-size-h2);
     font-weight: 500;
     margin-bottom: 0px;
+}
+
+p.p0 {
+    font-weight: 400;
 }
 
 p.p1 {
