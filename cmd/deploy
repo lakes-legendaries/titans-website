@@ -5,20 +5,38 @@ cmd/compile
 
 # get access
 if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
-    if [ ! -f ".azconn" ]; then
+
+    # load key from file
+    for FILE in .azconn ~/.azconn; do
+        if [ -f $FILE ]; then
+            export AZURE_STORAGE_CONNECTION_STRING="$(cat $FILE)"
+            break
+        fi
+    done
+
+    # error checking
+    if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
         echo "Cannot connect to Azure. "
         echo "Set AZURE_STORAGE_CONNECTION_STRING, "
         echo "or provide it in an .azconn file."
-    else
-        export AZURE_STORAGE_CONNECTION_STRING="$(cat .azconn)"
+        exit 1
     fi
 fi
 
-# sync files
-az storage blob sync \
-    -c "\$web" \
-    -s $(pwd) \
-    --exclude-path .azconn \
-    --exclude-path .git \
-    --exclude-path cmd \
-    --exclude-path html
+# upload files in directories
+for DIR in script style; do
+    az storage blob upload-batch \
+        -s "$DIR" \
+        -d "\$web" \
+        --destination-path "$DIR" \
+        --no-progress \
+    1> /dev/null
+done
+
+# upload root html files
+az storage blob upload-batch \
+    -s "$(pwd)" \
+    -d "\$web" \
+    --pattern "$(pwd)/*.html" \
+    --no-progress \
+1> /dev/null
