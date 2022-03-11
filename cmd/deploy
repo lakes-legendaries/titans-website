@@ -5,22 +5,14 @@ cmd/compile
 
 # get access
 if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
-
-    # load key from file
-    for FILE in .azconn ~/.azconn; do
-        if [ -f $FILE ]; then
-            export AZURE_STORAGE_CONNECTION_STRING="$(cat $FILE)"
-            break
-        fi
-    done
-
-    # error checking
-    if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
+    SECRETS_FILE=~/secrets/azconn-dev
+    if [ ! -f $SECRETS_FILE ]; then
         echo "Cannot connect to Azure. "
         echo "Set AZURE_STORAGE_CONNECTION_STRING, "
-        echo "or provide it in an .azconn file."
+        echo "or provide it in $SECRETS_FILE"
         exit 1
     fi
+    export AZURE_STORAGE_CONNECTION_STRING="$(cat $FILE)"
 fi
 
 # upload files in directories
