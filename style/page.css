@@ -35,3 +35,8 @@ div.header_footer {
 .collapsed {
     display: none;
 }
+
+iframe.std {
+    border: None;
+    width: 100%;
+}
