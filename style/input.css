@@ -9,6 +9,7 @@
     --button-padding: 10px;
     --input-width: 25%;
     --submit-width: unset;
+    --comments-width: 75%;
 }
 
 @media (pointer:none), (pointer:coarse) {
@@ -18,10 +19,11 @@
         --button-width: 45%;
         --input-width: 70%;
         --submit-width: 20%
+        --comments-width: 100%;
     }
 }
 
-button, input[type=text] {
+button, input[type=text], textarea {
     background-color: var(--button-bg-color);
     color: var(--button-color);
     border: var(--button-border-width) solid var(--button-color);
@@ -46,4 +48,9 @@ input[type=text] {
     text-align: center;
     color: var(--font-color);
     width: var(--input-width);
+}
+
+textarea {
+    width: var(--comments-width);
+    resize: none;
 }

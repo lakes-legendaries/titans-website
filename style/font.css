@@ -40,3 +40,8 @@ p.p1 {
 span.ks {
     color: #05ce78;
 }
+
+span.link {
+    text-decoration: underline;
+    cursor: pointer;
+}

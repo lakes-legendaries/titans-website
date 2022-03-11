@@ -50,3 +50,18 @@ $("#subscribe_button").click(
         $("#subscribe_success_message").fadeTo(1000, 1);
     }
 );
+
+// questions button
+$("#questions_link").click(
+    function() {
+
+        // fade-out prompt
+        $("#questions_prompt").fadeTo(1000, 0);
+
+        // fade-in box
+        var form = document.getElementById("questions_form");
+        form.style.display = "block";
+        form.style.opacity = 0;
+        $("#questions_form").fadeTo(1000, 1);
+    }
+);
