@@ -1,5 +1,12 @@
 :root {
     --max-width: 1080px;
+    --credits-width: 600px;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    :root {
+        --credits-width: 95%;
+    }
 }
 
 body {
@@ -33,7 +40,7 @@ div.header_footer {
 }
 
 div.credits {
-    width: 600px;
+    width: var(--credits-width);
 }
 
 .collapsed {

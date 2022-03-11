@@ -5,6 +5,7 @@
     --font-size-h1: 24px;
     --font-size-h2: 20px;
     --font-size-p1: 16px;
+    --font-size-p2: 14px;
 }
 
 @media (pointer:none), (pointer:coarse) {
@@ -12,6 +13,7 @@
         --font-size-h1: 50px;
         --font-size-h2: 30px;
         --font-size-p1: 18px;
+        --font-size-p2: 12px;
     }
 }
 
@@ -38,12 +40,17 @@ p.p1 {
     font-weight: 400;
 }
 
+.p2 {
+    font-size: var(--font-size-p2);
+    font-weight: 400;
+}
+
 p.justified {
     text-align: justify;
     text-justify: inter-word;
 }
 
-p.bgcolor {
+.bgcolor {
     color: var(--font-color-bg);
 }
 
@@ -51,7 +58,7 @@ span.ks {
     color: #05ce78;
 }
 
-span.link {
+.link {
     text-decoration: underline;
     cursor: pointer;
 }
