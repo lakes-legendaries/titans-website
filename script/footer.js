@@ -52,7 +52,6 @@ $("#subscribe_button").click(
         // send email to server
         const url = "https://titansapi.eastus.cloudapp.azure.com/subscribe/"
             + encodeURI(document.getElementById("subscribe_email").value);
-        console.log(url);
         fetch(url);
     }
 );
