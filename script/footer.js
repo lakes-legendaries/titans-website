@@ -25,7 +25,7 @@ for (var prefix of ["video", "read", "pnp"]) {
     $("#" + prefix + "_button").click(show_block(prefix));
 }
 
-// submit button
+// subscribe submit button
 $("#subscribe_button").click(
     function(){
 
@@ -56,7 +56,7 @@ $("#subscribe_button").click(
     }
 );
 
-// questions button
+// questions link
 $("#questions_link").click(
     function() {
 
@@ -68,5 +68,38 @@ $("#questions_link").click(
         form.style.display = "block";
         form.style.opacity = 0;
         $("#questions_form").fadeTo(1000, 1);
+    }
+);
+
+// questions submit button
+$("#questions_button").click(
+    function(){
+
+        // make success message visible
+        var box = document.getElementById("questions_success_box");
+        box.style.display = "block";
+        
+        // position message
+        var msg = document.getElementById("questions_success_message");
+        const xy = $("#questions_form").offset();
+        const width = document.getElementById("questions_form").clientWidth;
+        msg.style.top = xy.top + "px";
+        msg.style.left = xy.left + "px";
+        msg.style.width = width + "px";
+        msg.style.position = "absolute";
+        msg.style.opacity = 0;
+
+        // fade-out subscribe options
+        $("#questions_form").fadeTo(1000, 0);
+
+        // fade-in sucess message
+        $("#questions_success_message").fadeTo(1000, 1);
+
+        // send questions to server
+        const url = "https://titansapi.eastus.cloudapp.azure.com/comments/"
+            + encodeURI(document.getElementById("questions_box").value)
+            + "?email="
+            + encodeURI(document.getElementById("questions_email").value);
+        fetch(url);
     }
 );
