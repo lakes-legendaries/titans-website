@@ -50,7 +50,7 @@ $("#subscribe_button").click(
         $("#subscribe_success_message").fadeTo(1000, 1);
 
         // send email to server
-        const url = "http://titansapi.eastus.cloudapp.azure.com/subscribe/"
+        const url = "https://titansapi.eastus.cloudapp.azure.com/subscribe/"
             + encodeURI(document.getElementById("subscribe_email").value);
         console.log(url);
         fetch(url);
