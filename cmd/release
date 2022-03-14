@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# load sas strings
+DEV_SAS="$(cat ~/secrets/titans-fileserver-dev-sas)"
+PRO_SAS="$(cat ~/secrets/titans-fileserver-sas)"
+
+# delete all blobs in production
+azcopy rm "https://titansfileserver.blob.core.windows.net/\$web/$PRO_SAS" \
+    --recursive=true --include-pattern="*"
+
+# copy all dev blobs over
+azcopy copy \
+    "https://titansfileserverdev.blob.core.windows.net/\$web$DEV_SAS" \
+    "https://titansfileserver.blob.core.windows.net/\$web/$PRO_SAS" \
+    --recursive --include-pattern="*"
