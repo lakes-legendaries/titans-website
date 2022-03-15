@@ -45,11 +45,14 @@ button.subscribe {
     width: var(--submit-width);
 }
 
+input[type=text], textarea {
+    color: var(--font-color);
+    font-weight: var(--input-font-weight);
+}
+
 input[type=text] {
     text-align: center;
-    color: var(--font-color);
     width: var(--input-width);
-    font-weight: var(--input-font-weight);
 }
 
 textarea {
