@@ -101,6 +101,5 @@ $("#questions_button").click(
             + "?email="
             + encodeURIComponent(document.getElementById("questions_email").value);
         fetch(url);
-        console.log(url);
     }
 );
