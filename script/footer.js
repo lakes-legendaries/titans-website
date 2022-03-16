@@ -51,7 +51,7 @@ $("#subscribe_button").click(
 
         // send email to server
         const url = "https://titansapi.eastus.cloudapp.azure.com/subscribe/"
-            + encodeURI(document.getElementById("subscribe_email").value);
+            + encodeURIComponent(document.getElementById("subscribe_email").value);
         fetch(url);
     }
 );
@@ -97,9 +97,10 @@ $("#questions_button").click(
 
         // send questions to server
         const url = "https://titansapi.eastus.cloudapp.azure.com/comments/"
-            + encodeURI(document.getElementById("questions_box").value)
+            + encodeURIComponent(document.getElementById("questions_box").value)
             + "?email="
-            + encodeURI(document.getElementById("questions_email").value);
+            + encodeURIComponent(document.getElementById("questions_email").value);
         fetch(url);
+        console.log(url);
     }
 );
