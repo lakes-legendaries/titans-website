@@ -26,7 +26,7 @@ for DIR in script style; do
 done
 
 # upload root html files
-for FILE in $(ls -p | grep -v /); do
+for FILE in $(ls -p | grep -v / | grep -v README.rst); do
     az storage blob upload \
         -c "\$web" \
         -f $FILE \
