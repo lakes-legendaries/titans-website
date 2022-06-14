@@ -29,8 +29,8 @@ This requires that you additionally have a connection SAS in
 :code:`~/secrets/titans-fileserver`.
 
 The live website is served by a `CDN <https://titans-website.azureedge.net/>`_,
-and is accessible at the DNS `TitansOfEden.com/
-<https://titans-website.azureedge.net/>`_.
+and is accessible at the DNS `TitansOfEden.com
+<https://www.titansofeden.com>`_.
 
 ****************
 Supporting Files
