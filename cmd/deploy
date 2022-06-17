@@ -22,7 +22,8 @@ for DIR in script style; do
         -d "\$web" \
         --destination-path "$DIR" \
         --no-progress \
-    1> /dev/null
+        --overwrite \
+    &> /dev/null
 done
 
 # upload root html files
@@ -33,5 +34,6 @@ for FILE in $(ls -p | grep -v / | grep -v README.rst); do
         -n $FILE \
         --no-progress \
         --content-type text/html \
-    1> /dev/null
+        --overwrite \
+    &> /dev/null
 done
